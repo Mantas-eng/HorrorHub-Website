@@ -1,7 +1,7 @@
 # HORROR HUB
 Horror Hub yra internetinė filmų platforma, skirta mylėtojams, kurie mėgsta siaubo filmus. Ši programa suteikia galimybę žiūrėti platų siaubo filmų pasirinkimą, tarp jų naujausius hitus ir klasikinius šedevrus. Be to, ji taip pat leidžia vartotojams ziureti dalintis įspūdžiais su bendruomene ir gauti rekomendacijas pagal jų skonį.
 
-<img src="./images/main.png"/>
+<img src="./src/images/main.png"/>
 
 ## Naudojimas
 Ši svetainė sukurta naudojant Bootstrap ir Sass. Ji naudoja Font Awesome ikonoms.
