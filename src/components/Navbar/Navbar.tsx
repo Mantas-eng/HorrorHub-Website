@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '../styless/styles.module.scss'; 
-import Link from 'next/link'; 
+import styles from '../styles/styles.module.scss';
+import Link from 'next/link';
 import LogoIMG from './logo/logo.png';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
@@ -18,7 +18,7 @@ const App: React.FC = () => {
     username: '',
     password: '',
     email: ''
-  }); 
+  });
   const router = useRouter();
 
   const handleShowModal = () => setShowModal(true);
@@ -115,11 +115,11 @@ const App: React.FC = () => {
         </Container>
       </Navbar>
 
-      <UserModal 
-        show={showModal} 
-        handleClose={handleCloseModal} 
-        user={userData} 
-        handleLogout={handleLogout} 
+      <UserModal
+        show={showModal}
+        handleClose={handleCloseModal}
+        user={userData}
+        handleLogout={handleLogout}
       />
     </>
   );

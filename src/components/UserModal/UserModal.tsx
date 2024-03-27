@@ -1,10 +1,8 @@
-// UserModal.tsx
-
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 interface UserModalProps {
-  user: any; 
+  user: any;
   show: boolean;
   handleClose: () => void;
   handleLogout: () => void;

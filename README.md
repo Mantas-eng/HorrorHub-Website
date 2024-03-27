@@ -10,8 +10,8 @@ Horror Hub yra internetinė filmų platforma, skirta mylėtojams, kurie mėgsta 
 
 - Modernus išdėstymas su pasirinktais spalvomis/stiliais/fonais
 - Atsakantis dizainas
-- Lipnus naršymo meniu su stiliaus pakeitimais slinkimo metu
-- Bootstrap moduliai
+- naršymo meniu su stiliaus pakeitimais
+- Bootstrap 
 - Formos ir įvesties laukų stiliai
 - rikiavimas pagal filmo pavadinimo stulpelį
 - galimybę ieškoti filmų

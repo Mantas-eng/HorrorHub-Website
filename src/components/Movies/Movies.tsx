@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap';
 import SearchBar from '../SearchBar/SearchBar';
-import styles from '../styless/card.module.css';
+import styles from '../styles/card.module.scss';
 
 interface Movie {
   _id: string;
@@ -21,7 +21,7 @@ const Movies: React.FC = () => {
     axios.get<{ movies: Movie[] }>('http://localhost:3000/movies')
       .then(response => {
         setMovies(response.data.movies);
-        setDefaultMovies(response.data.movies); 
+        setDefaultMovies(response.data.movies);
       })
       .catch(error => {
         console.error('Error fetching movies:', error);
@@ -45,7 +45,7 @@ const Movies: React.FC = () => {
   };
 
   const handleCardClick = (index: number) => {
-    setClickedCardIndex(index); 
+    setClickedCardIndex(index);
   };
 
   return (
@@ -60,7 +60,7 @@ const Movies: React.FC = () => {
           <Col key={movie._id} className={`mb-4 animated fadeIn delay-${index + 1}s`} onClick={() => handleCardClick(index)}>
             <div className={`card ${styles.card} ${styles.animated} ${styles.fadeIn} ${styles.delay}-${index + 1}s`} style={{ position: 'relative' }}>
               <img src={movie.film_image} className="card-img-top" alt={movie.film_name} />
-              {clickedCardIndex === index && ( 
+              {clickedCardIndex === index && (
                 <div className="position-absolute top-0 start-0 w-100 h-100 bg-overlay" style={{ zIndex: 1 }}></div>
               )}
               <div className="card-body bg-dark">

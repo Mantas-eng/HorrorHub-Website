@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../src/components/styless/styles.module.scss";
+import "../src/components/styles/styles.module.scss";
 import Header from "../src/components/Header/Header";
 import Navbar from "../src/components/Navbar/Navbar";
 import DownloadSection from "../src/components/DownloadSection/downloadSection";
