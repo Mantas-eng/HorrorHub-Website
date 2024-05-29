@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className='row  text-center '>
+        <div className='row  text-center'>
           <div className="col-12 text-container">
               <Movies />
           </div>

@@ -20,7 +20,6 @@ function Main() {
             <div className='Footer'>
                 <Footer/>
             </div>
-          
         </div>
     );
 }

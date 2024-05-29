@@ -4,7 +4,6 @@ import Link from 'next/link';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
-
 import LogoIMG from "../src/components/Navbar/logo/logo.png";
 
 const RegisterPage: React.FC = () => {
@@ -40,7 +39,6 @@ const RegisterPage: React.FC = () => {
       const { token } = response.data;
       Cookies.set('token', token, { expires: 1 }); 
 
-     
       router.push('/LoginPage');
 
     } catch (error) {
@@ -115,9 +113,13 @@ const RegisterPage: React.FC = () => {
                     <span className="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                   </Button>
                   <div className="text-center mt-3">
-                    <Link href="/" passHref className="text-white small text-decoration-none">Prisijungti</Link> 
+                    <Link href="/" passHref>
+                      <span className="text-white small text-decoration-none">Prisijungti</span>
+                    </Link> 
                     <span className="text-white mx-2">|</span>
-                    <Link href="/?narsyti" passHref className="text-white small text-decoration-none">Naršyti</Link> 
+                    <Link href="/?narsyti" passHref>
+                      <span className="text-white small text-decoration-none">Naršyti</span>
+                    </Link>
                   </div>
                 </div>
               </div>

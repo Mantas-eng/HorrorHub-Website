@@ -5,7 +5,6 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import LogoIMG from "../src/components/Navbar/logo/logo.png"; 
 import { useRouter } from 'next/router';
-
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -62,7 +61,7 @@ const LoginPage: React.FC = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="bg-dark text-white py-4">
       <div className='row justify-content-between pt-4'>
         <div className='col-12 text-center mt-4'>
           <img

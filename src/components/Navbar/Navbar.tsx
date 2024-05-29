@@ -8,7 +8,6 @@ import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import UserModal from '../UserModal/UserModal';
 
 const App: React.FC = () => {
