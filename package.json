@@ -37,7 +37,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "sass": "sass src/components/styless/styles.module.scss dist/css"
   },
