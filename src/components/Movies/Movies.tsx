@@ -18,7 +18,7 @@ const Movies: React.FC = () => {
   const [clickedCardIndex, setClickedCardIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    axios.get<{ movies: Movie[] }>('http://localhost:3000/movies')
+    axios.get<{ movies: Movie[] }>('https://horror-hub-website.vercel.app')
       .then(response => {
         setMovies(response.data.movies);
         setDefaultMovies(response.data.movies);

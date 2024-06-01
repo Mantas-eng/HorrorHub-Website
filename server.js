@@ -18,6 +18,7 @@ const corsOptions = {
   origin: ['http://localhost:3001', process.env.NEXT_PUBLIC_BACKEND_URL],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 app.prepare().then(() => {
@@ -26,13 +27,17 @@ app.prepare().then(() => {
   server.use(cors(corsOptions));
   server.use(express.json());
   server.use(movieRoutes);
-
+  server.options('*', cors(corsOptions));
+  server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Private-Network', 'true');
+    next();
+  });
   server.all('*', (req, res) => {
     return handle(req, res);
   });
 
   mongoose
-    .connect(MONGODB_URI)
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
       console.log('Connected to MongoDB');
       server.listen(PORT, (err) => {
