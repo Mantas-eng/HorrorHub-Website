@@ -16,7 +16,7 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
-    "express": "^4.19.1",
+    "express": "^4.19.2",
     "g": "^2.0.1",
     "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
@@ -37,7 +37,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node Backend/server.js",
     "lint": "next lint",
     "sass": "sass src/components/styless/styles.module.scss dist/css"
   },
